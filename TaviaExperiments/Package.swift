@@ -17,12 +17,17 @@ let package = Package(
         .target(
             name: "AppFeature",
             dependencies: [
+                "DetectAndCropColor",
                 "DetectCropAndPlaceAlphanumeric",
                 "PlaceGif",
                 "PlaceImage",
                 "PlaceObject",
                 "PlaceVideo",
             ]),
+        .target(name: "ColorHelper"),
+        .target(
+            name: "DetectAndCropColor",
+            dependencies: ["ColorHelper", "TransformHelper"]),
         .target(name: "DetectCropAndPlaceAlphanumeric"),
         .target(name: "GifHelper"),
         .target(
@@ -36,6 +41,7 @@ let package = Package(
         .target(
             name: "PlaceVideo",
             resources: [.process("Resources")]),
+        .target(name: "TransformHelper"),
         .testTarget(
             name: "AppFeatureTests",
             dependencies: ["AppFeature"]),

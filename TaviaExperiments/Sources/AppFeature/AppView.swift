@@ -1,3 +1,4 @@
+import DetectAndCropColor
 import DetectCropAndPlaceAlphanumeric
 import PlaceGif
 import PlaceImage
@@ -34,6 +35,10 @@ public struct AppView: View {
                     .padding(.vertical)
                     NavigationLink("Detect, Crop And Place Alphanumeric") {
                         DetectCropAndPlaceAlphanumeric.ContentView()
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Detect And Crop Color") {
+                        DetectAndCropColor.ContentView()
                     }
                     .padding(.vertical)
                 }
