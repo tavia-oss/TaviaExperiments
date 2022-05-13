@@ -16,9 +16,15 @@ let package = Package(
     targets: [
         .target(
             name: "AppFeature",
-            dependencies: ["PlaceImage"]),
+            dependencies: [
+                "PlaceImage",
+                "PlaceVideo",
+            ]),
         .target(
             name: "PlaceImage",
+            resources: [.process("Resources")]),
+        .target(
+            name: "PlaceVideo",
             resources: [.process("Resources")]),
         .testTarget(
             name: "AppFeatureTests",

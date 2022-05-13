@@ -1,4 +1,5 @@
 import PlaceImage
+import PlaceVideo
 import SwiftUI
 
 public struct AppView: View {
@@ -10,6 +11,10 @@ public struct AppView: View {
                 Section {
                     NavigationLink("Place Image Center") {
                         PlaceImageView(placeMode: .screenCenter)
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Place Video Center") {
+                        PlaceVideoView()
                     }
                     .padding(.vertical)
                 }
