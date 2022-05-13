@@ -17,10 +17,16 @@ let package = Package(
         .target(
             name: "AppFeature",
             dependencies: [
+                "PlaceGif",
                 "PlaceImage",
                 "PlaceObject",
                 "PlaceVideo",
             ]),
+        .target(name: "GifHelper"),
+        .target(
+            name: "PlaceGif",
+            dependencies: ["GifHelper"],
+            resources: [.process("Resources")]),
         .target(
             name: "PlaceImage",
             resources: [.process("Resources")]),

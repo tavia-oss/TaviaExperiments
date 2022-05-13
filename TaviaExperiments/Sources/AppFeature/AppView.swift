@@ -1,3 +1,4 @@
+import PlaceGif
 import PlaceImage
 import PlaceObject
 import PlaceVideo
@@ -20,6 +21,10 @@ public struct AppView: View {
                     .padding(.vertical)
                     NavigationLink("Place Object Center") {
                         PlaceObjectView()
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Place Gif Center") {
+                        PlaceGifView()
                     }
                     .padding(.vertical)
                 }
