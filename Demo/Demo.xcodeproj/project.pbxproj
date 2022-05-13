@@ -10,6 +10,7 @@
 		13169E1F282E1524009EAB74 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13169E1E282E1524009EAB74 /* DemoApp.swift */; };
 		13169E23282E1524009EAB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13169E22282E1524009EAB74 /* Assets.xcassets */; };
 		13169E26282E1524009EAB74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13169E25282E1524009EAB74 /* Preview Assets.xcassets */; };
+		13BAD66E282E19ED00C374A4 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 13BAD66D282E19ED00C374A4 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BAD66E282E19ED00C374A4 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +37,7 @@
 			children = (
 				13169E1D282E1524009EAB74 /* Demo */,
 				13169E1C282E1524009EAB74 /* Products */,
+				13BAD66C282E19ED00C374A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +67,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		13BAD66C282E19ED00C374A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +90,9 @@
 			dependencies = (
 			);
 			name = Demo;
+			packageProductDependencies = (
+				13BAD66D282E19ED00C374A4 /* AppFeature */,
+			);
 			productName = Demo;
 			productReference = 13169E1B282E1524009EAB74 /* TaviaExperiments.app */;
 			productType = "com.apple.product-type.application";
@@ -335,6 +348,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13BAD66D282E19ED00C374A4 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13169E13282E1524009EAB74 /* Project object */;
 }
