@@ -1,3 +1,4 @@
+import DetectCropAndPlaceAlphanumeric
 import PlaceGif
 import PlaceImage
 import PlaceObject
@@ -29,6 +30,10 @@ public struct AppView: View {
                     .padding(.vertical)
                     NavigationLink("Place Image At Tapped") {
                         PlaceImageView(placeMode: .tappedLocation)
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Detect, Crop And Place Alphanumeric") {
+                        DetectCropAndPlaceAlphanumeric.ContentView()
                     }
                     .padding(.vertical)
                 }

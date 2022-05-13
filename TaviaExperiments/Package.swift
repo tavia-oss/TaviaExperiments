@@ -17,11 +17,13 @@ let package = Package(
         .target(
             name: "AppFeature",
             dependencies: [
+                "DetectCropAndPlaceAlphanumeric",
                 "PlaceGif",
                 "PlaceImage",
                 "PlaceObject",
                 "PlaceVideo",
             ]),
+        .target(name: "DetectCropAndPlaceAlphanumeric"),
         .target(name: "GifHelper"),
         .target(
             name: "PlaceGif",
