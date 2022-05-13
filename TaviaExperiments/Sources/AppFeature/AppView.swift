@@ -1,4 +1,5 @@
 import PlaceImage
+import PlaceObject
 import PlaceVideo
 import SwiftUI
 
@@ -15,6 +16,10 @@ public struct AppView: View {
                     .padding(.vertical)
                     NavigationLink("Place Video Center") {
                         PlaceVideoView()
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Place Object Center") {
+                        PlaceObjectView()
                     }
                     .padding(.vertical)
                 }

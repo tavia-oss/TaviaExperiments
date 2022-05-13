@@ -18,11 +18,13 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 "PlaceImage",
+                "PlaceObject",
                 "PlaceVideo",
             ]),
         .target(
             name: "PlaceImage",
             resources: [.process("Resources")]),
+        .target(name: "PlaceObject"),
         .target(
             name: "PlaceVideo",
             resources: [.process("Resources")]),
