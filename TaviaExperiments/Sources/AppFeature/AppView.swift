@@ -27,6 +27,10 @@ public struct AppView: View {
                         PlaceGifView()
                     }
                     .padding(.vertical)
+                    NavigationLink("Place Image At Tapped") {
+                        PlaceImageView(placeMode: .tappedLocation)
+                    }
+                    .padding(.vertical)
                 }
             }
         }
