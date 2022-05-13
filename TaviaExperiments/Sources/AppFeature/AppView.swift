@@ -1,11 +1,20 @@
+import PlaceImage
 import SwiftUI
 
 public struct AppView: View {
     public init() {}
 
     public var body: some View {
-        Text("TaviaExperiments")
-            .padding()
+        NavigationView {
+            List {
+                Section {
+                    NavigationLink("Place Image Center") {
+                        PlaceImageView(placeMode: .screenCenter)
+                    }
+                    .padding(.vertical)
+                }
+            }
+        }
     }
 }
 
