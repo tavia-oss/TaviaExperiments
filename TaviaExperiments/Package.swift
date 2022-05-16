@@ -19,6 +19,7 @@ let package = Package(
             dependencies: [
                 "DetectAndCropColor",
                 "DetectCropAndPlaceAlphanumeric",
+                "DetectCropAndPlaceObject",
                 "PlaceGif",
                 "PlaceImage",
                 "PlaceObject",
@@ -29,6 +30,10 @@ let package = Package(
             name: "DetectAndCropColor",
             dependencies: ["ColorHelper", "TransformHelper"]),
         .target(name: "DetectCropAndPlaceAlphanumeric"),
+        .target(
+            name: "DetectCropAndPlaceObject",
+            dependencies: ["TransformHelper"],
+            resources: [.process("Resources")]),
         .target(name: "GifHelper"),
         .target(
             name: "PlaceGif",
