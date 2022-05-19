@@ -18,7 +18,12 @@ class PlaceObjectViewController: UIViewController {
         (200, 200, 203),  // lightgray
         (132, 145, 158),  // gray
         (0, 0, 0),  // black
-    ].map { (r, g, b) in UIColor.init(red: r, green: g, blue: b, alpha: 1.0) }
+    ].map { (r, g, b) in
+        let red = CGFloat(r) / 255
+        let green = CGFloat(g) / 255
+        let blue = CGFloat(b) / 255
+        return UIColor.init(red: red, green: green, blue: blue, alpha: 1.0)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
