@@ -1,5 +1,7 @@
 import DetectAndCropColor
+import DetectCropAndCopyHumanMovements
 import DetectCropAndPlaceAlphanumeric
+import DetectCropAndPlaceObject
 import PlaceGif
 import PlaceImage
 import PlaceObject
@@ -39,6 +41,14 @@ public struct AppView: View {
                     .padding(.vertical)
                     NavigationLink("Detect And Crop Color") {
                         DetectAndCropColor.ContentView()
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Detect, Crop And Place Object") {
+                        DetectCropAndPlaceObject.ContentView()
+                    }
+                    .padding(.vertical)
+                    NavigationLink("Detect, Crop and Copy Human Movements") {
+                        DetectCropAndCopyHumanMovements.ContentView()
                     }
                     .padding(.vertical)
                 }

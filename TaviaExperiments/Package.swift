@@ -18,7 +18,9 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 "DetectAndCropColor",
+                "DetectCropAndCopyHumanMovements",
                 "DetectCropAndPlaceAlphanumeric",
+                "DetectCropAndPlaceObject",
                 "PlaceGif",
                 "PlaceImage",
                 "PlaceObject",
@@ -28,7 +30,14 @@ let package = Package(
         .target(
             name: "DetectAndCropColor",
             dependencies: ["ColorHelper", "TransformHelper"]),
+        .target(
+            name: "DetectCropAndCopyHumanMovements",
+            resources: [.process("Metal/Shaders.metal")]),
         .target(name: "DetectCropAndPlaceAlphanumeric"),
+        .target(
+            name: "DetectCropAndPlaceObject",
+            dependencies: ["TransformHelper"],
+            resources: [.process("Resources")]),
         .target(name: "GifHelper"),
         .target(
             name: "PlaceGif",
