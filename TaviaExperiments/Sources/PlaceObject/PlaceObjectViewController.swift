@@ -67,6 +67,18 @@ class PlaceObjectViewController: UIViewController {
         let position = SCNVector3(0.0, 0.0, -0.5)
         node.position = camera.convertPosition(position, to: nil)
         node.eulerAngles = camera.eulerAngles
+        
+        let rotate = SCNAction.rotate(by: .pi, around: SCNVector3(1, 1, 1), duration: 6)
+        let wait = SCNAction.wait(duration: 1)
+        let scale = SCNAction.scale(by: 1.1, duration: 3)
+        let seq = SCNAction.sequence([rotate, wait, scale])
+        node.runAction(SCNAction.repeatForever(seq))
+        
+        material.lightingModel = .physicallyBased
+        material.metalness.contents = 1.0
+        material.metalness.intensity = 1.0
+        material.roughness.intensity = 0.0
+        
         sceneView.scene.rootNode.addChildNode(node)
     }
 }
